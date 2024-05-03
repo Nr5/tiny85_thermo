@@ -1,0 +1,25 @@
+<circuit version="1.1.0-SR0" rev="1917" stepSize="1000000" stepsPS="40000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Max72xx_matrix" CircId="Max72xx_matrix-320" mainComp="false" Show_id="true" Show_Val="false" Pos="592,264" rotation="0" hflip="1" vflip="1" label="Max72xx" idLabPos="-0.0995417,26.1711" labelrot="0" valLabPos="-1.77931,28.0712" valLabRot="0" Color="Purple" NumDisplays="4 Led" />
+
+<item itemtype="Dht22" CircId="Dht22-350" mainComp="false" Show_id="false" Show_Val="false" Pos="648,340" rotation="0" hflip="1" vflip="1" label="Dht22-350" idLabPos="-28,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT22" TempInc="2.5 °C" HumiInc="5 _%" />
+
+<item itemtype="Rectangle" CircId="Rectangle-541" mainComp="false" Show_id="false" Show_Val="false" Pos="688,300" rotation="0" hflip="1" vflip="1" label="Rectangle-541" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="300 _px" V_size="180 _px" Border="1 _px" Z_Value="-1" Color="#0d7375" Opacity="1" />
+
+<item itemtype="TextComponent" CircId="TextComponent-542" mainComp="false" Show_id="false" Show_Val="false" Pos="696,336" rotation="0" hflip="1" vflip="1" label="TextComponent-542" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Margin="5 _px" Border="1 _px" Color="#000516" Opacity="1" Font="Helvetica [Cronyx]" Font_Color="#0fcabe" Font_Size="10 _px" Fixed_Width="false" Text="Thermo- / Hydrometer&#xa;____________________" />
+
+<item itemtype="MCU" CircId="tiny85-430" mainComp="false" Show_id="false" Show_Val="false" Pos="556,368" rotation="-90" hflip="1" vflip="1" label="tiny85-430" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="thermometer_t85.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" varList="GPIOR0,GPIOR1" />
+
+<item itemtype="Node" CircId="Node-540" mainComp="false" Pos="572,324" />
+
+<item itemtype="Connector" uid="Connector-779" startpinid="Node-540-2" endpinid="Max72xx_matrix-320PinSck" pointList="572,324,564,324,564,316" />
+
+<item itemtype="Connector" uid="Connector-778" startpinid="tiny85-430-PORTB2" endpinid="Node-540-0" pointList="572,328,572,324" />
+
+<item itemtype="Connector" uid="Connector-777" startpinid="Dht22-350-inPin" endpinid="Node-540-1" pointList="612,336,604,336,604,324,572,324" />
+
+<item itemtype="Connector" uid="Connector-763" startpinid="tiny85-430-PORTB0" endpinid="Max72xx_matrix-320PinCS" pointList="588,328,588,316,580,316" />
+
+<item itemtype="Connector" uid="Connector-762" startpinid="tiny85-430-PORTB1" endpinid="Max72xx_matrix-320PinDin" pointList="580,328,580,320,572,320,572,316" />
+
+</circuit>
